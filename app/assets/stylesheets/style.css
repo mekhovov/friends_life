@@ -1,0 +1,28 @@
+
+/* images overrides
+------------------------------------------------------------------------------*/
+body {
+  background:#dcdcdc url('/images/linen_lite.png') repeat fixed;
+}
+
+.content .hero-unit {
+  background-color: white;
+}
+
+.friends-hero {
+  background: black url('/images/friends.jpg') no-repeat 40% 0%;
+  color:white;
+  height: 620px;
+}
+
+.rounded {
+  padding: 3px 25px;
+  -moz-border-radius: 40px;
+  -moz-box-shadow: 0 1px 1px #CCC;
+  -webkit-border-radius: 40px;
+  -webkit-box-shadow: 0 1px 1px #CCC;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00A0D1',endColorstr='#008DB8')";
+  border-radius: 40px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}

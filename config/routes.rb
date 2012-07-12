@@ -1,4 +1,16 @@
 FriendsLife::Application.routes.draw do
+
+
+  resources :authentications
+
+  devise_for :users, :controllers => { :registrations => 'registrations' }
+
+  match '/auth/:provider/callback', to: 'authentications#create'
+  match 'auth/failure', to: redirect('/')
+  resources :authentications
+
+  root :to => "application#welcome"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

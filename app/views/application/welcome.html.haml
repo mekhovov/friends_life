@@ -1,0 +1,32 @@
+.content.content_wrap
+  .hero-unit.friends-hero
+    .row-fluid
+      .span4
+      .span4
+        %h1 Friends Life
+        %p 
+          = link_to image_tag('twitter_64.png', :size => '64x64'), '/auth/twitter'
+          = link_to image_tag('facebook_64.png', :size => '64x64'), '/auth/facebook'
+          = link_to image_tag('foursquare.png', :size => '64x64'), '/auth/foursquare'
+          = link_to image_tag('github_64.png', :size => '64x64'), '/auth/github_64'
+          = link_to image_tag('linkedin_64.png', :size => '64x64'), '/auth/linkedin'
+      .span4
+  .row-fluid
+    .span3
+    .span2
+      %h2
+        Login
+      .p
+        %span.label.label-info 1
+        Login by one of popular site.
+    .span2
+      %h2 Connect
+      .p
+        %span.label.label-info 2
+        Connect your Sotial Networks.
+    .span2
+      %h2 Watch
+      .p
+        %span.label.label-info 3
+        Just relax and watch by your friends life.
+    .span3

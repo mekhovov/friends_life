@@ -1,0 +1,52 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    
+    %title Friends Life
+    
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}/
+    %meta{:name => "description", :content => ""}/
+    %meta{:name => "author", :content => ""}/
+    
+    = stylesheet_link_tag    "application"
+    = yield :stylesheet
+
+    /Le HTML5 shim, for IE6-8 support of HTML5 elements
+    /[if lt IE 9]
+    /  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    /<![endif]
+
+    /Le fav and touch icon
+    /<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    /<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    /<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    /<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    /<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    = csrf_meta_tags
+
+  %body
+    = render partial: "application/header"
+    .container-fluid
+      = yield :div
+      - if flash
+        - flash.each do |name, msg|
+          - if msg.is_a?(String)  
+            = content_tag :div, :class => "alert-message block-message #{name}" do
+              <a class="close" href="#">×</a>
+              <p><strong> 
+              = msg
+              </strong></p>
+          - if msg.is_a?(Array)
+            - msg.each do |m|
+              = content_tag :div, :class => "alert-message block-message #{name}" do
+                <a class="close" href="#">×</a>
+                <p><strong> 
+                = m
+                </strong></p>
+      = yield
+  
+  = javascript_include_tag "application"
+  = yield :javascript
+
