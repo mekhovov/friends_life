@@ -1,9 +1,11 @@
-.content.content_wrap
+.content.content_wrap.welcome_page
+  = image_tag '/images/friends.jpg', :class => 'background'
   .hero-unit.friends-hero
     .row-fluid
       .span4
       .span4
         %h1 Friends Life
+        %br
         %p 
           = link_to image_tag('twitter_64.png', :size => '64x64'), '/auth/twitter'
           = link_to image_tag('facebook_64.png', :size => '64x64'), '/auth/facebook'
@@ -30,3 +32,5 @@
         %span.label.label-info 3
         Just relax and watch by your friends life.
     .span3
+  %br
+  %br
