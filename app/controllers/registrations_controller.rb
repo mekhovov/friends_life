@@ -9,6 +9,8 @@ class RegistrationsController < Devise::RegistrationsController
   def build_resource(*args)
     super
     if session[:omniauth]
+      @exist_user = User.find_by_email @user.email
+      @user = @exist_user if @exist_user
       @user.apply_omniauth(session[:omniauth])
       @user.valid?
     end
