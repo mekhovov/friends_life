@@ -7,22 +7,16 @@ body {
 
 .content.content_wrap.welcome_page {
   background: rgba(255, 255, 255, 0.2);
-  
 }
 
 .content.welcome_page .hero-unit {
-  /*background-color: white;*/
-  /*background: rgba(200, 200, 200, 0.3);*/
   background: none;
 }
 
-.friends-hero.welcome_page {
+.friends-hero.welcome_page h1 {
   color: white;
 }
 
-.friends-hero.welcome_page a:hover {
-  color: white;
-}
 
 .welcome_page .row-fluid .span2 {
   background: rgba(255, 255, 255, 0.6);
@@ -36,7 +30,6 @@ body {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00A0D1',endColorstr='#008DB8')";
   border-radius: 10px;
   -webkit-font-smoothing: subpixel-antialiased;
-  /*text-shadow: 5px 3px 4px rgba(255, 255, 255, 0.3);*/
 }
 
 .rounded {

@@ -16,6 +16,11 @@ class User < ActiveRecord::Base
     self.email = omniauth['info']['email'] if email.blank?
     self.name = omniauth['info']['name']
     self.avatar = omniauth['info']['image']
+
+    # TODO: needed for FB ?
+    # user.oauth_token = auth.credentials.token
+    # user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+
     authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
   end
 
