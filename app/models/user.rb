@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
   def apply_omniauth(omniauth)
     self.email = omniauth['info']['email'] if email.blank?
     self.name = omniauth['info']['name']
+    self.name ||= "#{omniauth['info']['first_name']} #{omniauth['info']['last_name']}"
     self.avatar = omniauth['info']['image']
 
     # TODO: needed for FB ?

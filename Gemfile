@@ -22,6 +22,7 @@ gem 'haml-rails'
 gem 'devise'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'omniauth-foursquare'
 
 
 # Gems used only for assets and not required
