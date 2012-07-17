@@ -89,6 +89,9 @@ GEM
     omniauth-foursquare (0.0.7)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
+    omniauth-github (1.0.2)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -161,6 +164,7 @@ DEPENDENCIES
   jquery-rails
   omniauth-facebook
   omniauth-foursquare
+  omniauth-github
   omniauth-twitter
   pg
   rails (= 3.2.6)

@@ -7,7 +7,6 @@ class AuthenticationsController < ApplicationController
   
   def create
     omniauth = request.env["omniauth.auth"]
-    
     authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
     if authentication
       flash[:notice] = "Signed in successfully."
@@ -17,7 +16,7 @@ class AuthenticationsController < ApplicationController
       flash[:notice] = "Authentication successful."
       redirect_to authentications_url
     else
-      user = User.new
+      user = User.find_or_create_by_email request.env["omniauth.auth"]['info']['email']
       user.apply_omniauth(omniauth)
       if user.save
         flash[:notice] = "Signed in successfully."
