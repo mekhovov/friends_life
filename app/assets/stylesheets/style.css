@@ -4,6 +4,7 @@
 body {
   background:#dcdcdc url('/images/linen_lite.png') repeat fixed;
 }
+
 [class^="icon-"],
 [class*=" icon-"] {
   text-align: center;
@@ -16,9 +17,19 @@ body {
 
 .content.welcome_page .hero-unit {
   background: none;
-  padding: 60px;
+  /*padding: 60px;*/
   color: white;
   text-align: center;
+}
+
+
+.alert.notice {
+  background-color: #d1eed1;
+  border-color: #bfe7bf;
+}
+
+.alert {
+  margin-top: 40px;
 }
 
 .content.welcome_page .hero-unit a:hover {
