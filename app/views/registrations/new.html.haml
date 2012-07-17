@@ -1,0 +1,27 @@
+.content.content_wrap
+  .row-fluid
+    %br
+    %br
+    .span3
+    .span4
+      - if @user.password_required? 
+        %h2 Sign up
+      - else
+        %h2 Please specify your e-mail
+      = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :class => 'well form-search'}) do |f|
+        .alert.alert-error
+          = devise_error_messages!
+        .control-group
+          = f.label :email
+          = f.text_field :email
+
+        - if @user.password_required?
+          = f.label :password
+          = f.password_field :password
+
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation
+        .form-actions
+          = f.submit "Sign up", :class => 'btn'
+      .span3
+        / = render :partial => "devise/shared/links"
