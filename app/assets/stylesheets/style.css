@@ -4,6 +4,11 @@
 body {
   background:#dcdcdc url('/images/linen_lite.png') repeat fixed;
 }
+[class^="icon-"],
+[class*=" icon-"] {
+  text-align: center;
+  background: none;
+}
 
 .content.content_wrap.welcome_page {
   background: rgba(255, 255, 255, 0.2);
@@ -11,12 +16,22 @@ body {
 
 .content.welcome_page .hero-unit {
   background: none;
+  padding: 60px;
+  color: white;
+  text-align: center;
+}
+
+.content.welcome_page .hero-unit a:hover {
+  background: none;
 }
 
 .friends-hero.welcome_page h1 {
   color: white;
 }
 
+.hero-unit h1 {
+  font-family: "Bad Script";
+}
 
 .welcome_page .row-fluid .span2 {
   background: rgba(255, 255, 255, 0.6);
@@ -32,6 +47,11 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+h1 i, h2 i, h3 i {
+  padding-top: 6px;
+  padding-right: 6px;
+}
+
 .rounded {
   padding: 3px 25px;
   -moz-border-radius: 40px;
@@ -42,6 +62,95 @@ body {
   border-radius: 40px;
   -webkit-font-smoothing: subpixel-antialiased;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  height: 41px;
+  background: url(/images/header_bg.png);
+  border-bottom: none;
+  -webkit-box-shadow: 0 4px 10px black;
+  -moz-box-shadow: 0 4px 10px black;
+  box-shadow: 0 4px 10px black;
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+  overflow: visible;
+  margin-bottom: 18px;
+}
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.sub-nav {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+#main-nav {
+  -webkit-transition: 550ms cubic-bezier(0.51,0.01,0.37,0.98);
+  -moz-transition: 550ms cubic-bezier(0.51,0.01,0.37,0.98);
+  -ms-transition: 550ms cubic-bezier(0.51,0.01,0.37,0.98);
+  -o-transition: 550ms cubic-bezier(0.51,0.01,0.37,0.98);
+  transition: 550ms cubic-bezier(0.51,0.01,0.37,0.98);
+  -webkit-transform: translateZ(0);
+}
+.pull-left {
+  float: left;
+}
+.navbar .btn, .navbar a.btn, .modal-footer .btn-primary, .popover-content .btn, #bottom .btn {
+  cursor: pointer;
+  color: white;
+  border-color: #2C1C06;
+  text-shadow: 0 -1px 1px black;
+  background: #836950;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgzNjk1MCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0OTNiMjgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,rgba(131, 105, 80, 1) 0,rgba(73, 59, 40, 1) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(131, 105, 80, 1)),color-stop(100%,rgba(73, 59, 40, 1)));
+  background: -webkit-linear-gradient(top,rgba(131, 105, 80, 1) 0,rgba(73, 59, 40, 1) 100%);
+  background: -o-linear-gradient(top,rgba(131, 105, 80, 1) 0,rgba(73, 59, 40, 1) 100%);
+  background: -ms-linear-gradient(top,rgba(131, 105, 80, 1) 0,rgba(73, 59, 40, 1) 100%);
+  background: linear-gradient(top,rgba(131, 105, 80, 1) 0,rgba(73, 59, 40, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#836950',endColorstr='#493B28',GradientType=0);
+}
+.navbar .btn i {
+  background-image: none;
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 0;
+}
+.navbar .brand {
+  color: white;
+  float: none;
+  font-family: "Leckerli One";
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 0 1px 1px black;
+  padding: 6px 20px 12px;
+}
+
+.navbar a:hover {
+  background: none;
+}
+
+.navbar .btn.active, .navbar .btn:active, .popover .btn:active, .modal-footer .btn-primary:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5),0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5),0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5),0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.navbar .btn-refresh {
+  margin-top: -28px;
+}
+.sub-nav .btn-group {
+  display: inline-block;
+  position: relative;
+}
+
+.sub-nav .btn-group.user-ico a {
+  /*margin: 2px;*/
+  padding: 1px 3px 2px 1px;
 }
 
 .background {

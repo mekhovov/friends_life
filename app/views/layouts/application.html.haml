@@ -11,6 +11,8 @@
     
     = stylesheet_link_tag    "application"
     = yield :stylesheet
+    %link{:href => "http://fonts.googleapis.com/css?family=Leckerli+One", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Bad+Script", :rel => "stylesheet", :type => "text/css"}/
 
     /Le HTML5 shim, for IE6-8 support of HTML5 elements
     /[if lt IE 9]
@@ -27,7 +29,8 @@
     = csrf_meta_tags
 
   %body
-    = render partial: "application/header"
+    - if current_user
+      = render partial: "application/header"
     .container-fluid
       = yield :div
       - if flash

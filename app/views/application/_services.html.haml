@@ -1,0 +1,14 @@
+%li Connected:
+- current_user.authentications.each do |auth|
+  %li.auth_connected
+    = link_to authentication_path(:id => auth.id), confirm: "Are you sure you want to disconnecs #{auth.provider.titleize}?", method: :delete, class: 'remove' do
+      = image_tag "#{auth.provider}_32.png", :size => '24x24'
+      = auth.provider.titleize
+%li.divider
+%li Disconnected:
+- (Authentication.providers - current_user.authentications.map(&:provider)).each do |auth|
+  %li.auth_disconnected
+    = link_to "/auth/#{auth}" do
+      = image_tag "#{auth}_32.png", :size => '24x24'
+      = auth.titleize
+  .clear
