@@ -24,6 +24,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-foursquare'
 gem 'omniauth-github'
+gem 'omniauth-linkedin'
 
 
 # Gems used only for assets and not required

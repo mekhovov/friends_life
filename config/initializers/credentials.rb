@@ -12,6 +12,9 @@ if Rails.env.development? || Rails.env.test?
   # github
   ENV['GITHUB_KEY']      = '014f927ad73380f68f6a'
   ENV['GITHUB_SECRET']   = '1c372c351351354987ad426326820e33dde3b0fb'
+  # linkedin
+  ENV['LINKEDIN_KEY']    = 'r0vyr1xzjgd5'
+  ENV['LINKEDIN_SECRET'] = 'RooqRu4bfjKZEVKp'
 end
 
 if Rails.env.production? 
@@ -27,4 +30,7 @@ if Rails.env.production?
   # github
   ENV['GITHUB_KEY']      = 'a26abe74ee889d0566d4'
   ENV['GITHUB_SECRET']   = 'eb13ae038e1bc81cf38559b00d6dd52ea4e19905'
+  # linkedin
+  ENV['LINKEDIN_KEY']    = 'r0vyr1xzjgd5'
+  ENV['LINKEDIN_SECRET'] = 'RooqRu4bfjKZEVKp'
 end
